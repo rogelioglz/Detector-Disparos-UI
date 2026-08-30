@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔫 Detector de Disparos - Gemini AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="title-section">
+                <h1>🎯 DETECTOR DE DISPAROS</h1>
+                <p>Sistema Automático de Reportes - Gemini 2.0 Flash</p>
+            </div>
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                <span>Conectando...</span>
+            </div>
+        </div>
+
+        <!-- CANVAS PRINCIPAL -->
+        <div class="canvas-wrapper">
+            <canvas id="mainCanvas" width="1200" height="600"></canvas>
+        </div>
+
+        <!-- CONTROLES -->
+        <div class="controls">
+            <button id="btnSimular" class="btn btn-primary">▶ Simular Detección</button>
+            <button id="btnReporte" class="btn btn-secondary">📄 Generar Reporte</button>
+            <button id="btnLimpiar" class="btn btn-danger">🗑️ Limpiar</button>
+        </div>
+
+        <!-- PANEL DE DATOS -->
+        <div class="data-panel">
+            <div class="panel-section">
+                <h3>📍 LOCALIZACIÓN</h3>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Latitud:</span>
+                        <span class="value" id="latValue">10.396528°</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Longitud:</span>
+                        <span class="value" id="lonValue">-75.506694°</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Zona:</span>
+                        <span class="value" id="zoneValue">Sector Centro</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>📊 ANÁLISIS TÉCNICO</h3>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Confianza:</span>
+                        <span class="value" id="confidenceValue">94%</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Frecuencia Pico:</span>
+                        <span class="value" id="frequencyValue">3850 Hz</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Decibeles:</span>
+                        <span class="value" id="decibelValue">167 dB SPL</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Duración:</span>
+                        <span class="value" id="durationValue">145 ms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>🏛️ AUTORIDADES DESTINO</h3>
+                <div class="authorities-list" id="authoritiesList">
+                    <!-- Se generará dinámicamente -->
+                </div>
+            </div>
+        </div>
+
+        <!-- LOG DE EVENTOS -->
+        <div class="log-panel">
+            <h3>📋 Log de Eventos</h3>
+            <div class="log-container" id="logContainer">
+                <div class="log-entry info">✅ Sistema inicializado</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="canvas.js"></script>
+</body>
+</html>
